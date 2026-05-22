@@ -1,5 +1,4 @@
 """
-Vietnamese Auto Parts Demand Forecasting
 Strategy:
   - Aggregate daily net sales (clip returns at 0 per SKU per day)
   - Segment SKUs by activity level
