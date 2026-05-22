@@ -16,8 +16,8 @@ import warnings
 warnings.filterwarnings('ignore')
 
 print("Loading data...")
-train = pd.read_csv('/mnt/user-data/uploads/train.csv', low_memory=False)
-sub = pd.read_csv('/mnt/user-data/uploads/sample_submission.csv')
+train = pd.read_csv('train.csv', low_memory=False)
+sub = pd.read_csv('sample_submission.csv')
 train['Date'] = pd.to_datetime(train['Date'])
 
 # ==============================================================================
@@ -275,8 +275,8 @@ print(f"  Output shape: {result.shape}")
 print(f"  Sample rows:")
 print(result.head(3).to_string())
 
-result.to_csv('/mnt/user-data/outputs/submission.csv', index=False)
-print(f"\n✓ Submission saved to /mnt/user-data/outputs/submission.csv")
+result.to_csv('submission.csv', index=False)
+print(f"\n✓ Submission saved to submission.csv")
 
 # ==============================================================================
 # 8. Quality checks
